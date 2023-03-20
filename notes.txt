@@ -1,0 +1,15 @@
+pip install flask
+brew install anaconda
+export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+conda init
+conda init zsh
+conda activate base
+cd sayHello
+flask run
+
+http://127.0.0.1:5000/hello
+
+pip install gunicorn
+echo > Procfile
+pip freeze > requirements.txt
+pip install MarkupSafe

@@ -1,0 +1,23 @@
+{% macro format_cell(header, row) %}
+    {% set color = '' %}
+    {% macro format_cell(header, row) %}
+    {% set color = '' %}
+    
+    <td bgcolor="{{ color }}" align="left">
+        {% if header != 'guid' %}
+
+            {{ row[header]}}
+        {% else %}
+            {{ row[header] }}
+        {% endif %}
+    </td>
+{% endmacro %}
+    <td bgcolor="{{ color }}" align="left">
+        {% if header != 'Year_Month' %}
+
+            {{ row[header]}}
+        {% else %}
+            {{ row[header] }}
+        {% endif %}
+    </td>
+{% endmacro %}

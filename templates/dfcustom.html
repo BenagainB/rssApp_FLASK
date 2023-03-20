@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% from "macros/table_format.html" import format_cell %}
+
+{% block title %} DataFrame Row By Row {% endblock %}
+
+{% block body %}
+<p><a href="/">Back to title page</a></p>
+<table>
+    <tr>
+        {% for header in headers %}
+            <th>{{ header }}</th>
+        {% endfor %}
+    </tr>
+    {% for row in data %}
+        <tr>
+            {% for header in headers %}
+                {{ format_cell(header, row) }}
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+<p><a href="/">Back to title page</a></p>
+
+{{ dataframe|safe }}
+{% endblock %}
