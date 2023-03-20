@@ -1,22 +1,39 @@
 {% extends "layout.html" %}
 
-{% block title %} Minimal Flask Table {% endblock %}
+{% block title %} RSS Aggregator Project {% endblock %}
 
 {% block body %}
-<title>RSS Aggregator</title>
-<h1>RSS Aggregator Project</h1>
-<h2>News Sources:</h2>
-<ul>
-    <li>ABC News</li>
-    <li>Breitbart News</li>
-    <li>CNN</li>
-    <!--<li>Daily Mail</li>-->
-    <li>Developer Zone</li>
-    <li>Fox News</li>
-    <li>New York Times</li>
-    <li>Timcast News</li>
-</ul>
-<h3><a href="/dfcustom">Render pandas DataFrame row by row.</a></h3>
-<p><a href="/df">See the raw dataframe</a></p>
-<p><a href="https://www.wikipedia.org/">See the Project Report</a></p>
+<section class="hero is-primary">
+    <h3 class="container">
+        <h1 class="title">
+            RSS Aggregator Project
+        </h1>
+        <h2 class="subtitle"> 
+            News Sources:
+        </h2>
+        <ul>
+            <li>ABC News</li>
+            <li>Breitbart News</li>
+            <li>CNN</li>
+            <li>Daily Mail</li>
+            <li>Developer Zone</li>
+            <li>Fox News</li>
+            <li>New York Times</li>
+            <li>Timcast News</li>
+        </ul>
+        <h3>
+            <a href="/dfcustom">Render pandas DataFrame row by row.</a>
+        </h3>
+        <h3>
+            <a href="/df">Raw dataframe</a>
+        </h3>
+        <h3>
+            <a href="https://benagainb.github.io/PersonalWebsite/">Project Report</a>
+        </h3>
+        <h3>
+            <a href="https://github.com/BenagainB/rssApp_FLASK">Github Repository</a>
+        </h3>
+    </div>
+</section>
+
 {% endblock %}

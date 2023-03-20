@@ -24,7 +24,7 @@ def parse_xml(xml_data, publisher):
         #pub_date = parser.parse(pub_date)
         pub_date = pub_date.replace("GMT", "+0000")
         pub_date = pub_date.replace("EDT", "-0400")
-        #pub_date = datetime.strptime(pub_date, "%a, %d %b %Y %H:%M:%S %z")
+        pub_date = datetime.strptime(pub_date, "%a, %d %b %Y %H:%M:%S %z")
         #pub_date = datetime.strptime(pub_date, "%a, %d %b %Y %H:%M:%S %Z")
             #Sat, 18 Mar 2023 14:33:17 GMT
         
@@ -38,23 +38,23 @@ def parse_xml(xml_data, publisher):
 
         df = df.append(row, ignore_index=True)
         #print(f'Appending row %s of %s' % (index+1, items_length))
-
+        df.to_html(header="true", table_id="table")
     return df
 
 
 
 urls = []
 publishers = []
-#urls.append("https://rss.nytimes.com/services/xml/rss/nyt/US.xml")
-#publishers.append("New York Times")
+urls.append("https://rss.nytimes.com/services/xml/rss/nyt/US.xml")
+publishers.append("New York Times")
 urls.append("https://abcnews.go.com/abcnews/topstories")
 publishers.append("ABCNews")
 urls.append("https://moxie.foxnews.com/google-publisher/latest.xml")
 publishers.append("Fox News")
 urls.append("https://timcast.com/feed/")
 publishers.append("TIMCAST")
-#urls.append("https://www.dailymail.co.uk/news/index.rss")
-#publishers.append("Daily Mail")
+urls.append("https://www.dailymail.co.uk/news/index.rss")
+publishers.append("Daily Mail")
 urls.append("https://feeds.feedburner.com/breitbart")
 publishers.append("Breitbart News")
 

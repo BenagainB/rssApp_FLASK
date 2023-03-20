@@ -89,4 +89,5 @@ dfAll.to_csv('news.csv')
 #https://pandas.pydata.org/docs/user_guide/merging.html
 #https://pandas.pydata.org/docs/reference/api/pandas.concat.html
 #https://stackabuse.com/parsing-xml-with-beautifulsoup-in-python/
+#https://youtu.be/ukVjagiXJzw
 #https://github.com/ericmjl/minimal-flask-example

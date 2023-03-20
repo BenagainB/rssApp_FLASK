@@ -4,18 +4,14 @@
     {% set color = '' %}
     
     <td bgcolor="{{ color }}" align="left">
-        {% if header != 'guid' %}
-
-            {{ row[header]}}
-        {% else %}
-            {{ row[header] }}
+        {% if header == 'guid' %}   
+                {% set color = 'red' %}
         {% endif %}
     </td>
 {% endmacro %}
     <td bgcolor="{{ color }}" align="left">
-        {% if header != 'Year_Month' %}
-
-            {{ row[header]}}
+        {% if header == 'guid' %}
+            <a href="{{ row[header] }}" target="_blank">link</a>
         {% else %}
             {{ row[header] }}
         {% endif %}
