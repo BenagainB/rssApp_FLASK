@@ -74,13 +74,6 @@ for index in range(len(urls)):
 dfAll.sort_values(by=['pubDate'], inplace=True, ascending=False)
 #dfAll.to_csv('news.csv')
 
-"""
-df = pd.read_csv(
-    "https://data.boston.gov/dataset/c8b8ef8c-dd31-4e4e-bf19-af7e4e0d7f36/resource/29e74884-a777-4242-9fcc-c30aaaf3fb10/download/economic-indicators.csv",
-    parse_dates=[["Year", "Month"]],
-)
-length = len(df)
-"""
 
 df = dfAll
 length = len(df)
@@ -95,13 +88,13 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/runscript")
-def ScriptPage():
+#@app.route("/runscript")
+#def ScriptPage():
     # Type what you want to do when the user clicks on the link.
     #
     # Once it is done with doing that code... it will
     # redirect back to the homepage
-    return redirect(url_for("index"))
+#    return redirect(url_for("index"))
 
 @app.route("/df")
 def dataframe():
